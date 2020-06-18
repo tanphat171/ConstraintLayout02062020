@@ -38,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
+        android:id="@+id/textviee4"
         android:text="View 4"/>
     <TextView
         app:layout_constraintTop_toBottomOf="@id/textview1"
@@ -45,7 +46,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
+        android:id="@+id/textview5"
         android:text="View 5"/>
+    <TextView
+        app:layout_constraintLeft_toLeftOf="@id/textview2"
+        app:layout_constraintBottom_toTopOf="@id/textview2"
+        android:textSize="30dp"
+        android:text="View 6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        app:layout_constraintLeft_toLeftOf="@id/textview5"
+        app:layout_constraintTop_toBottomOf="@id/textview5"
+        android:textSize="30dp"
+        android:text="View 7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
