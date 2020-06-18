@@ -7,9 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="30dp"
         android:layout_width="wrap_content"
@@ -17,51 +15,41 @@
         android:id="@+id/textview1"
         android:text="View 1" />
     <TextView
-        app:layout_constraintBottom_toTopOf="@id/textview1"
-        app:layout_constraintEnd_toStartOf="@id/textview1"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/textview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:id="@+id/textview2"
         android:text="View 2"/>
-
-    <TextView
-        app:layout_constraintTop_toBottomOf="@id/textview1"
-        app:layout_constraintEnd_toStartOf="@id/textview1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="View 3"/>
-    <TextView
-        app:layout_constraintBottom_toTopOf="@id/textview1"
-        app:layout_constraintStart_toEndOf="@id/textview1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:id="@+id/textviee4"
-        android:text="View 4"/>
-    <TextView
-        app:layout_constraintTop_toBottomOf="@id/textview1"
-        app:layout_constraintStart_toEndOf="@id/textview1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:id="@+id/textview5"
-        android:text="View 5"/>
-    <TextView
-        app:layout_constraintLeft_toLeftOf="@id/textview2"
-        app:layout_constraintBottom_toTopOf="@id/textview2"
-        android:textSize="30dp"
-        android:text="View 6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        app:layout_constraintLeft_toLeftOf="@id/textview5"
-        app:layout_constraintTop_toBottomOf="@id/textview5"
-        android:textSize="30dp"
-        android:text="View 7"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        app:layout_constraintGuide_percent="0.1"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <TextView
+       app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview3"
+        android:text="View 3" />
+    <TextView
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview4"
+        android:text="View 4" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
